@@ -1,0 +1,26 @@
+@use '../extra' as *
+
+\:root
+	box-sizing: border-box
+	font-size: $root-font-size
+	font-family: $root-font-family
+
+*, *::after, *::before
+	box-sizing: inherit
+
+body
+	margin: 0
+	padding: 0
+	background: $softBlue linear-gradient($softViolet, $softBlue) no-repeat
+	min-height: 100vh
+	line-height: 140%
+	display: grid
+	place-items: center
+
+button
+	border: none
+
+
+/* li &>p display: none &:active &>p display: block */
+
+

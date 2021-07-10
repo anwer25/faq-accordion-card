@@ -1,0 +1,74 @@
+@use '../extra' as *
+
+main
+	margin: 0 auto
+	width: 90%
+	min-height: 30rem
+	display: flex
+	flex-flow: column nowrap
+	justify-content: center
+	@media screen and (min-width: 800px)
+		flex-flow: row nowrap
+		background-color: $lightGrayishBlue
+		border-radius: 10px
+		width: 60%
+
+.card
+	&-image
+		display: flex
+		justify-content: center
+		transform: translateY(45%) translateX(-4.5%)
+	&-img
+		max-width: 100%
+		filter: drop-shadow(0rem 1.5rem rgba(0,0,0,0.1))
+	&-main
+		background-color: $lightGrayishBlue
+		margin: 0 auto
+		width: 90%
+		border-radius: 10px
+		padding: 4rem 2rem
+
+h1
+	text-align: center
+	font-size: 5rem
+	margin: 7rem 0
+	@media screen and (min-width: 800px)
+		margin: 1rem 0
+
+.btn
+	width: 100%
+	padding: 1rem 2rem
+	cursor: pointer
+	background-color: inherit
+	outline: none
+	text-align: left
+	transition: all 0.5s
+	&:hover
+		color: #fa8d0c
+	&:after
+		content: "\27A4"
+		color: #fa8d0c
+		float: right
+		transition: all 0.3s linear
+	&.is-open:after
+		transform: rotate(90deg)
+	&-content
+		max-height: 0
+		color: $darkGrayishBlue
+		font-size: 1rem
+		margin: 0 2rem
+		padding-left: 1rem
+		overflow: hidden
+		transition: max-height 0.3s ease-in-out
+
+	&-wrapper
+		display: flex
+		justify-content: center
+		flex-flow: column nowrap
+	&-card
+		border-bottom: 1px solid $darkGrayishBlue
+		padding: 1rem
+
+
+
+
